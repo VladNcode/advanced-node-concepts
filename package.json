@@ -1,0 +1,44 @@
+{
+  "name": "nodejs-internals-lab",
+  "version": "1.0.0",
+  "description": "A comprehensive lab for mastering Node.js internals, performance profiling, and optimization",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --inspect src/index.js",
+    "profile": "node --prof src/experiments/performance-test.js",
+    "profile:clinic": "clinic doctor -- node src/experiments/performance-test.js",
+    "profile:flame": "clinic flamegraph -- node src/experiments/performance-test.js",
+    "profile:heap": "clinic heapprofiler -- node src/experiments/performance-test.js",
+    "worker:demo": "node src/experiments/worker-threads.js",
+    "eventloop:demo": "node src/experiments/event-loop-demo.js",
+    "gc:demo": "node --expose-gc src/experiments/garbage-collection.js",
+    "memory:leak": "node src/experiments/memory-leak-demo.js",
+    "benchmark": "node src/benchmarks/index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "performance",
+    "profiling",
+    "internals",
+    "event-loop",
+    "worker-threads",
+    "garbage-collection",
+    "v8",
+    "libuv"
+  ],
+  "author": "Node.js Internals Student",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "lodash": "^4.17.21",
+    "clinic": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
